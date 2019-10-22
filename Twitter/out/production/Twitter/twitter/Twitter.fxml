@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="twitter.TwitterControl">
+   <ListView fx:id="tweetsListView" layoutX="195.0" layoutY="89.0" prefHeight="324.0" prefWidth="277.0" />
+   <TextField fx:id="searchFollowerText" layoutX="487.0" layoutY="89.0" onAction="#buttonSearchFollower" prefHeight="25.0" prefWidth="200.0" promptText="Cerca follwer" />
+   <Button layoutX="69.0" layoutY="286.0" mnemonicParsing="false" onAction="#buttonTweet" text="Twitta" textFill="#000dff">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <TextArea fx:id="tweetTextArea" layoutX="13.0" layoutY="88.0" prefHeight="190.0" prefWidth="170.0" promptText="Scrivi un messaggio             (140 caratteri)" wrapText="true" />
+   <Button layoutX="548.0" layoutY="121.0" mnemonicParsing="false" onAction="#buttonSearchFollower" text="Aggiungi" textFill="#000dff">
+      <font>
+         <Font size="14.0" />
+      </font></Button>
+   <Label fx:id="errorFollower" layoutX="487.0" layoutY="157.0" prefHeight="17.0" prefWidth="200.0" textFill="RED">
+      <font>
+         <Font name="System Bold" size="10.0" />
+      </font></Label>
+   <Label layoutX="13.0" layoutY="52.0" prefHeight="17.0" prefWidth="170.0" text="Cosa stai pensando?" textFill="#000dff">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="249.0" layoutY="52.0" prefHeight="27.0" prefWidth="170.0" text="Tweet dei follower" textFill="#000dff">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="487.0" layoutY="52.0" prefHeight="27.0" prefWidth="154.0" text="Cerchi qualcuno?" textFill="#000dff">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button layoutX="295.0" layoutY="420.0" mnemonicParsing="false" onAction="#showListTweet" text="Aggiorna" textFill="#000dff">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <ListView fx:id="followerListView" layoutX="487.0" layoutY="218.0" prefHeight="62.0" prefWidth="200.0" />
+   <Label layoutX="486.0" layoutY="183.0" prefHeight="27.0" prefWidth="125.0" text="I tuoi follower" textFill="#000dff">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button layoutX="548.0" layoutY="286.0" mnemonicParsing="false" onAction="#showListFollower" text="Aggiorna" textFill="#000dff">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <Label fx:id="welcomeBack" alignment="TOP_CENTER" layoutX="190.0" layoutY="14.0" prefHeight="27.0" prefWidth="277.0" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Button layoutX="487.0" layoutY="13.0" mnemonicParsing="false" onAction="#logout" text="Esci" textFill="#000dff">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <Label layoutX="487.0" layoutY="322.0" prefHeight="27.0" prefWidth="154.0" text="I tuoi following" textFill="#000dff">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <ListView fx:id="followingListView" layoutX="487.0" layoutY="351.0" prefHeight="62.0" prefWidth="200.0" />
+   <Button layoutX="548.0" layoutY="420.0" mnemonicParsing="false" onAction="#showListFollowing" text="Aggiorna" textFill="#000dff">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+</AnchorPane>
